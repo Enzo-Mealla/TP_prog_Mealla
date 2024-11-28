@@ -1,0 +1,98 @@
+[
+    {
+        "puntuacion": 425,
+        "vidas": 0,
+        "usuario": "EDUARDO",
+        "volumen_musica": 0,
+        "aciertos": 0,
+        "tiempo": 10,
+        "fecha y hora": "2024-11-27 18:46:31"
+    },
+    {
+        "puntuacion": 275,
+        "vidas": 0,
+        "usuario": "ENZO",
+        "volumen_musica": 100,
+        "aciertos": 0,
+        "fecha y hora": "2024-11-21 23:50:33"
+    },
+    {
+        "puntuacion": 250,
+        "vidas": 0,
+        "usuario": "ENZO",
+        "volumen_musica": 100,
+        "aciertos": 0,
+        "fecha y hora": "2024-11-21 23:48:10"
+    },
+    {
+        "puntuacion": 175,
+        "vidas": 0,
+        "usuario": "ASDASD",
+        "volumen_musica": 100,
+        "aciertos": 0,
+        "fecha y hora": "2024-11-21 23:59:13"
+    },
+    {
+        "puntuacion": 0,
+        "vidas": 0,
+        "usuario": "FABI",
+        "volumen_musica": 100,
+        "aciertos": 0,
+        "tiempo": 10,
+        "fecha y hora": "2024-11-27 18:29:31"
+    },
+    {
+        "puntuacion": 0,
+        "vidas": 0,
+        "usuario": "ELIAS",
+        "volumen_musica": 0,
+        "aciertos": 0,
+        "tiempo": 10,
+        "fecha y hora": "2024-11-27 18:24:56"
+    },
+    {
+        "puntuacion": 175,
+        "vidas": 0,
+        "usuario": "OP",
+        "volumen_musica": 100,
+        "aciertos": 0,
+        "tiempo": 10,
+        "fecha y hora": "2024-11-27 19:05:18"
+    },
+    {
+        "puntuacion": 75,
+        "vidas": 0,
+        "usuario": "ASD",
+        "volumen_musica": 100,
+        "aciertos": 0,
+        "tiempo": 10,
+        "fecha y hora": "2024-11-28 00:06:07"
+    },
+    {
+        "puntuacion": 350,
+        "vidas": 0,
+        "usuario": "DFAS",
+        "volumen_musica": 0,
+        "aciertos": 0,
+        "tiempo": 10,
+        "fecha y hora": "2024-11-28 00:15:55"
+    },
+    {
+        "puntuacion": 0,
+        "vidas": 0,
+        "usuario": "ASDA",
+        "volumen_musica": 0,
+        "aciertos": 0,
+        "tiempo": 10,
+        "fecha y hora": "2024-11-28 00:21:21"
+    },
+    {
+        "puntuacion": 25,
+        "vidas": 0,
+        "usuario": "RWERW",
+        "volumen_musica": 5,
+        "aciertos": 0,
+        "tiempo": 10,
+        "fecha y hora": "2024-11-28 00:23:37"
+    }
+]
