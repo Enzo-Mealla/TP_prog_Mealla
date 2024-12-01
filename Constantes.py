@@ -17,6 +17,7 @@ FPS = 60
 
 TAMAÑO_PREGUNTA = (700,350)
 TAMAÑO_RESPUESTA = (250,60)
+TAMAÑO_RANKING = (325,100)
 TAMAÑO_BOTON = (250,60)
 CUADRO_TEXTO = (250,50)
 TAMAÑO_BOTON_VOLUMEN = (60,60)
@@ -25,21 +26,21 @@ TAMAÑO_BOTON_VOLVER = (100,40)
 
 ruta_fuente = "imagenes/MonsterHunter.ttf"
 fuente = pygame.font.Font(ruta_fuente,30)
-
-FUENTE_50 = pygame.font.SysFont("Arial Narrow",50)
-FUENTE_40 = pygame.font.SysFont("Arial Narrow",40)
-FUENTE_32 = pygame.font.SysFont("Arial Narrow",32)
-FUENTE_30 = pygame.font.SysFont("Arial Narrow",30)
-FUENTE_25 = pygame.font.SysFont("Arial Narrow",25)
-FUENTE_22 = pygame.font.SysFont("Arial Narrow",22)
+fuente_50 = pygame.font.Font(ruta_fuente,50)
+FUENTE_50 = pygame.font.SysFont("Helvetica",40)
+FUENTE_40 = pygame.font.SysFont("Helvetica",30)
+FUENTE_32 = pygame.font.SysFont("Helvetica",22)
+FUENTE_30 = pygame.font.SysFont("Helvetica",20)
+FUENTE_25 = pygame.font.SysFont("Helvetica",15)
+FUENTE_22 = pygame.font.SysFont("Helvetica",12)
 
 CLICK_ACIERTO = pygame.mixer.Sound("sonidos/correcto.mp3")
 CLICK_SONIDO = pygame.mixer.Sound("sonidos/click.mp3")
 CLICK_ERROR = pygame.mixer.Sound("sonidos/incorrecto.mp3")
 
 CANTIDAD_VIDAS = 3
-PUNTUACION_ACIERTO = 100
-PUNTUACION_ERROR = 25
+PUNTUACION_ACIERTO = 500
+PUNTUACION_ERROR = 300
 
 BOTON_JUGAR = 0
 BOTON_CONFIG = 1

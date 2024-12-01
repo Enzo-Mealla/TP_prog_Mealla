@@ -22,6 +22,7 @@ def mostrar_menu(pantalla:pygame.Surface,cola_eventos:list[pygame.event.Event],d
     
     fondo = pygame.image.load("imagenes/Fondo_menu.png")
     fondo = pygame.transform.scale(fondo,VENTANA)
+    
 
     #pygame.display.set_caption("MENU")
     retorno = "menu"

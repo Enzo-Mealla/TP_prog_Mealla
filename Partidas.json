@@ -94,5 +94,51 @@
         "aciertos": 0,
         "tiempo": 10,
         "fecha y hora": "2024-11-28 00:23:37"
+    },
+    {
+        "puntuacion": 550,
+        "vidas": 0,
+        "usuario": "MEALLA",
+        "volumen_musica": 10,
+        "aciertos": 0,
+        "tiempo": 10,
+        "fecha y hora": "2024-11-28 20:28:24"
+    },
+    {
+        "puntuacion": 475,
+        "vidas": 0,
+        "usuario": "FABIAN",
+        "volumen_musica": 10,
+        "aciertos": 0,
+        "tiempo": 10,
+        "fecha y hora": "2024-11-28 20:28:24"
+    },
+    {
+        "puntuacion": 50,
+        "vidas": 0,
+        "usuario": "ASDASD",
+        "volumen_musica": 10,
+        "aciertos": 0,
+        "tiempo": 10,
+        "fecha y hora": "2024-11-28 20:28:24"
+    },
+    {
+        "puntuacion": 0,
+        "vidas": 0,
+        "usuario": "",
+        "volumen_musica": 25,
+        "aciertos": 0,
+        "tiempo": 10,
+        "fecha y hora": "2024-12-01 00:11:19"
+    },
+    {
+        "puntuacion": 925,
+        "vidas": 0,
+        "usuario": "ENZO",
+        "volumen_musica": 0,
+        "aciertos": 0,
+        "tiempo": 10,
+        "P_inicial": 500,
+        "fecha y hora": "2024-12-01 13:50:55"
     }
 ]

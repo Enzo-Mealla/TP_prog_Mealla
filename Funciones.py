@@ -12,8 +12,11 @@ def mostrar_texto(surface, text, pos, font, color=pygame.Color('black')):
     space = font.size(' ')[0]  # The width of a space.
     max_width, max_height = surface.get_size()
     x, y = pos
+    
     for line in words:
+        
         for word in line:
+    
             word_surface = font.render(word, False, color)
             word_width, word_height = word_surface.get_size()
             if x + word_width >= max_width:
@@ -23,6 +26,11 @@ def mostrar_texto(surface, text, pos, font, color=pygame.Color('black')):
             x += word_width + space
         x = pos[0]  # Reset the x.
         y += word_height  # Start on new row.
+        
+
+
+    
+    
     
 def mezclar_lista(lista:list) -> None:
     random.shuffle(lista)
@@ -68,9 +76,9 @@ def verificar_respuesta(datos_juego:dict,pregunta_actual:dict,respuesta:int,flag
     if pregunta_actual["respuesta_correcta"] == respuesta:
         datos_juego["aciertos"] += 1
         if flag_x2 == True:             #chequeo de bonus x2
-            datos_juego["puntuacion"] += PUNTUACION_ACIERTO *2
+            datos_juego["puntuacion"] += datos_juego["P_inicial"] *2
         else:
-            datos_juego["puntuacion"] += PUNTUACION_ACIERTO
+            datos_juego["puntuacion"] += datos_juego["P_inicial"]
         retorno = True
         if datos_juego["aciertos"] == 5:
             datos_juego["vidas"] += 1
@@ -78,8 +86,8 @@ def verificar_respuesta(datos_juego:dict,pregunta_actual:dict,respuesta:int,flag
             
     else:
         #SIN PUNTOS NEGATIVOS
-        if datos_juego["puntuacion"] > PUNTUACION_ERROR:
-            datos_juego["puntuacion"] -= PUNTUACION_ERROR
+        if datos_juego["puntuacion"] > datos_juego["P_fallo"]:
+            datos_juego["puntuacion"] -= datos_juego["P_fallo"]
         
         #CON PUNTOS NEGATIVOS
         #datos_juego["puntuacion"] -= PUNTUACION_ERROR
@@ -175,9 +183,7 @@ def calcular_posicion(image1_rect):
     x1, y1 = CORDS_BONUS #variable globales
     button_width, button_height = image1_rect.width // 4, image1_rect.height // 6
     button1_rect = pygame.Rect(x1, y1 + image1_rect.height, button_width, button_height)
-    button2_rect = pygame.Rect(
-        x1 + image1_rect.width - button_width, y1 + image1_rect.height, button_width, button_height
-    )
+    button2_rect = pygame.Rect(x1 + image1_rect.width - button_width, y1 + image1_rect.height, button_width, button_height)
       # Botón 3 (centrado entre los botones 1 y 2)
     button3_x = (button1_rect.right + button2_rect.left) // 2 - button_width // 2
     button3_y = y1 + image1_rect.height  # Mismo eje vertical
