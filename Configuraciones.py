@@ -25,7 +25,22 @@ boton_mute["superficie"] = pygame.Surface(TAMAÑO_BOTON_VOLUMEN)
 boton_mute["rectangulo"] = boton_mute["superficie"].get_rect()
 boton_mute["superficie"].fill(COLOR_AZUL)
 
+imagen_barra = {}
+
+imagen_barra_0 = pygame.image.load("imagenes/0%.png")
+imagen_barra[0] = pygame.transform.scale(imagen_barra_0,(460,60))
+imagen_barra_1 = pygame.image.load("imagenes/20%.png")
+imagen_barra[1] = pygame.transform.scale(imagen_barra_1,(460,60))
+imagen_barra_2 = pygame.image.load("imagenes/40%.png")
+imagen_barra[2] = pygame.transform.scale(imagen_barra_2,(460,60))
+imagen_barra_3 = pygame.image.load("imagenes/60%.png")
+imagen_barra[3] = pygame.transform.scale(imagen_barra_3,(460,60))
+imagen_barra_4 = pygame.image.load("imagenes/80%.png")
+imagen_barra[4] = pygame.transform.scale(imagen_barra_4,(460,60))
+imagen_barra_5 = pygame.image.load("imagenes/100%.png")
+imagen_barra[5] = pygame.transform.scale(imagen_barra_5,(460,60))
 sonido_anterior = 0
+
 def mostrar_configuracion(pantalla:pygame.Surface,cola_eventos:list[pygame.event.Event],datos_juego:dict) -> str:
     retorno = "configuraciones"
     
@@ -110,10 +125,9 @@ def mostrar_configuracion(pantalla:pygame.Surface,cola_eventos:list[pygame.event
 
     pantalla.fill(COLOR_BLANCO)
 
-
     
     boton_resta["rectangulo"] = pantalla.blit(boton_resta["superficie"],(20,200))
-    boton_suma["rectangulo"] = pantalla.blit(boton_suma["superficie"],(420,200))
+    boton_suma["rectangulo"] = pantalla.blit(boton_suma["superficie"],(370,200))
     boton_volver["rectangulo"] = pantalla.blit(boton_volver["superficie"],(10,10))
     boton_mute["rectangulo"] = pantalla.blit(boton_mute["superficie"],(500,200))
 
@@ -144,5 +158,12 @@ def mostrar_configuracion(pantalla:pygame.Surface,cola_eventos:list[pygame.event
     mostrar_texto(pantalla,f"P.F: {datos_juego["P_fallo"]} ",(200,400),FUENTE_50,COLOR_NEGRO)
     mostrar_texto(pantalla,f"vidas: {datos_juego["vidas"]} ",(200,500),FUENTE_50,COLOR_NEGRO)
     mostrar_texto(pantalla,f"Tiempo: {datos_juego["tiempo"]} ",(200,600),FUENTE_50,COLOR_NEGRO)
+
+    for i in range(6):
+        seleccion = 20 * i
+        if datos_juego["volumen_musica"] == seleccion:
+            pantalla.blit(imagen_barra[i],(20,200))
+
+
 
     return retorno
