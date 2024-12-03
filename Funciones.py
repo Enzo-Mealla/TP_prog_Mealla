@@ -5,6 +5,7 @@ import json
 import datetime
 import csv
 import time
+import os
 
 def mostrar_texto(surface, text, pos, font, color=pygame.Color('black')):
     
@@ -127,22 +128,56 @@ def generar_json(nombre_archivo:str,lista:list) -> bool:
 
 
 # Cargar preguntas desde el archivo CSV
-def cargar_preguntas(nombre_archivo):
-    "carga las preguntas,respuestas e imagen correspondiente de un archivo csv"
-    preguntas = []
-    with open(nombre_archivo, newline='', encoding='utf-8') as archivo:
-        lector = csv.DictReader(archivo)
-        for fila in lector:
-            preguntas.append({
-                "pregunta": fila["Pregunta"],
-                "respuesta_1": fila["Respuesta 1"],
-                "respuesta_2": fila["Respuesta 2"],
-                "respuesta_3": fila["Respuesta 3"],
-                "respuesta_4": fila["Respuesta 4"],
-                "respuesta_correcta": int(fila["Respuesta Correcta"]),
-                "tiene_imagen": fila["Tiene Imagen"]
-            })
+# def cargar_preguntas(nombre_archivo):
+#     "carga las preguntas,respuestas e imagen correspondiente de un archivo csv"
+#     preguntas = []
+    
+#     with open(nombre_archivo, newline='', encoding='utf-8') as archivo:
+#         lector = csv.DictReader(archivo)
+#         for fila in lector:
+#             preguntas.append({
+#                 "pregunta": fila["Pregunta"],
+#                 "respuesta_1": fila["Respuesta 1"],
+#                 "respuesta_2": fila["Respuesta 2"],
+#                 "respuesta_3": fila["Respuesta 3"],
+#                 "respuesta_4": fila["Respuesta 4"],
+#                 "respuesta_correcta": int(fila["Respuesta Correcta"]),
+#                 "tiene_imagen": fila["Tiene Imagen"]
+#             })
+#     return 
+
+def crear_diccionario_preguntas(lista_valores:list) -> dict:
+    preguntas = {}
+    preguntas["pregunta"] = lista_valores[0]
+    preguntas["respuesta_1"] = lista_valores[1]
+    preguntas["respuesta_2"] = lista_valores[2]
+    preguntas["respuesta_3"] = lista_valores[3]
+    preguntas["respuesta_4"] = lista_valores[4]
+    preguntas["respuesta_correcta"] = int(lista_valores[5])
+    preguntas["tiene_imagen"] = lista_valores[6]
+    
     return preguntas
+
+def leer_csv_preguntas(nombre_archivo:str,lista_preguntas:list) -> bool:
+    if os.path.exists(nombre_archivo):
+        with open(nombre_archivo,"r",encoding="utf-8") as archivo: # -> encoding para que acepte acentos 
+            #Falsa lectura -> Para evitar recorrer en el for de abajo, la cabecera
+            archivo.readline()
+            
+            for linea in archivo:
+                linea_aux = linea.replace("\n","")
+                lista_valores = linea_aux.split(",")
+                preguntas = crear_diccionario_preguntas(lista_valores)
+                lista_preguntas.append(preguntas)
+        retorno = True
+    else:
+        retorno = False
+        
+    return retorno
+
+
+
+
 
 # Cargar y redimensionar imágenes
 def cargar_imagenes_bonus():

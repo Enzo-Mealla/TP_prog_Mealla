@@ -39,8 +39,10 @@ def mostrar_juego_terminado(pantalla:pygame.Surface,cola_eventos:list[pygame.eve
                 nombre = nombre[0:-1] #Me elimina automaticamente el último
                 caja_texto["superficie"].fill(COLOR_AZUL)
             if len(nombre) >= 10:
+
+                nombre = nombre[0:-1] 
                 nombre = nombre[0:10]
-                
+                caja_texto["superficie"].fill(COLOR_AZUL)
             if len(letra_presionada) == 1:
                 if bloc_mayus != 0:
                     nombre += letra_presionada.upper()

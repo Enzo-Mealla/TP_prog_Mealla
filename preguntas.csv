@@ -1,4 +1,4 @@
-Pregunta,Respuesta 1,Respuesta 2,Respuesta 3,Respuesta 4,Respuesta Correcta,Tiene Imagen
+Pregunta,Respuesta_1,Respuesta_2,Respuesta_3,Respuesta_4,Respuesta_Correcta,Tiene_Imagen
 "¿Cuál es el nombre del dragón anciano conocido como el ""Dragón del Viento""?",Teostra,Kushala Daora,Lunastra,Chameleos,2,none
 "¿Qué monstruo es conocido como el ""Emperador de las Llamas""?",Rathalos,Teostra,Fatalis,Rajang,2,none
 "¿Qué tipo de arma tiene la habilidad de ""cargar"" para lanzar disparos potentes?",Espadón,Arco,Ballesta Pesada,Hacha Cargada,4,none
@@ -21,4 +21,3 @@ Pregunta,Respuesta 1,Respuesta 2,Respuesta 3,Respuesta 4,Respuesta Correcta,Tien
 "¿Qué ítem es este?","Carne a la Parrilla","Hierbas","Pociones","Bebida Caliente",1,Well-done_Steak
 "¿Qué ítem es este?","Bebida Caliente","Bebida Fría","Antídoto","Hierbas",2,Cold_Drink
 "¿Qué ítem es este?","Bebida Fría","Mega Poción","Antídoto","Hierbas",3,Antidote
-

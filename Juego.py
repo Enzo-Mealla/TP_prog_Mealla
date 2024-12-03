@@ -31,7 +31,9 @@ for i in range(4): #puse esto en 4
 
 
 indice = 0 #Todo dato inmutable en la funcion que muestra esa ventana, lo tengo que definir como global
-lista_preguntas = cargar_preguntas("preguntas.csv")
+
+lista_preguntas = []
+leer_csv_preguntas("preguntas.csv",lista_preguntas)
 mezclar_lista(lista_preguntas)
 bandera_respuesta = False #Todo dato inmutable en la funcion que muestra esa ventana, lo tengo que definir como global
 
